@@ -1,0 +1,110 @@
+.\"t
+.TH "CAN\-ETH\-GW" "1" "July 31, 2014" "CAN \- Ethernet Gateway Send Utility User Manual" "master\-preview"
+.SH NAME
+.PP
+cegwsend \- CAN \- Ethernet Gateway Send Utility
+.SH SYNOPSIS
+.PP
+\f[B]cegwsend\f[] [ \f[B]\-s\f[] \f[I]SRC\-MAC\f[] |
+\f[B]\-\-src\f[]=\f[I]SRC\-MAC\f[] ] [ \f[B]\-d\f[] \f[I]DST\-MAC\f[] |
+\f[B]\-dst\f[]=\f[I]DST\-MAC\f[] ] [ \f[B]\-t\f[] \f[I]ETHERTYPE\f[] |
+\f[B]\-\-type\f[]=\f[I]ETHERTYPE\f[] ] { \f[B]\-r\f[] \f[I]RAW\f[] |
+\f[B]\-\-raw\f[]=\f[I]RAW\f[] } { \f[B]\-i\f[] \f[I]IFACE\f[] |
+\f[B]\-\-interface\f[]=\f[I]IFACE\f[] }
+.PP
+\f[I]ETHERTYPE\f[] := { \f[B]ipv4\f[] | \f[B]ipv6\f[] | \f[B]can\f[] |
+\f[B]canfd\f[] | \f[B]none\f[] | \f[B][0x]1234\f[] }
+.SH DESCRIPTION
+.PP
+Send Utility for testing non ip\-based ethernet interfaces.
+You can send with this utility an ethernet package with raw data or with
+an CAN/CAN\-FD Frame as payload.
+.SH OPTIONS
+.TP
+.B \f[B]\-s\f[], \f[B]\-\-src\f[]=\f[I]SRC\-MAC\f[]
+The MAC address, which should be written down in the SOURCE field of the
+ethernet header.
+In the current version this option is NOT USED.
+.RS
+.RE
+.TP
+.B \f[B]\-d\f[], \f[B]\-\-dst\f[]=\f[I]DST\-MAC\f[]
+The MAC address, which should be written down in the DESTINATION field
+of the ethernet header.
+.RS
+.RE
+.TP
+.B \f[B]\-t\f[], \f[B]\-\-type\f[]=\f[I]ETHERTYPE\f[]
+Set the EtherType of the Ethernet frame.
+\[aq]\f[B]ipv4\f[]\[aq], \[aq]\f[B]ipv6\f[]\[aq], \[aq]\f[B]can\f[]\[aq]
+and \[aq]\f[B]canfd\f[]\[aq] can be translated to their hexadcimal code.
+All other types must be written like \[aq]\f[B]0x1234\f[]\[aq] or
+\[aq]\f[B]1234\f[].
+Please note that the last example is a hexadecimal number, too.
+\[aq]\f[B]none\f[]\[aq] can be used for experimental purposes.
+.RS
+.RE
+.TP
+.B \f[B]\-r\f[], \f[B]\-\-raw\f[]=\f[I]RAW\f[]
+The raw data that should be sent.
+Please notice that the raw data must be typed in the console as a
+hexadecimal number like this "01 23 45 67 89 ab cd ef", for example.
+You can use capital letters for A, B, C, D, E and F, of course.
+.RS
+.RE
+.TP
+.B \f[B]\-i\f[], \f[B]\-\-interface\f[]=\f[I]IFACE\f[]
+The name of the Ethernet Interface, that is going to receive the message
+.RS
+.RE
+.SH EXIT STATUS
+.PP
+.TS
+tab(@);
+c l.
+T{
+CODE
+T}@T{
+Description
+T}
+_
+T{
+0
+T}@T{
+success
+T}
+T{
+!=0
+T}@T{
+failure
+T}
+.TE
+.SH BUGS
+.PP
+This is an early preview version.
+They are maybe some bugs.
+Please report bugs at GitHub can_eth_gw
+Issues (https://github.com/can-eth-gw/can_eth_gw/issues)
+.SH COPYRIGHT
+.PP
+© Copyright 2013 Fabian Raab, Stefan Smarzly
+.PP
+This file is part of CAN\-Eth\-GW.
+.PP
+CAN\-Eth\-GW is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation, either version 3 of the License, or (at your
+option) any later version.
+.PP
+CAN\-Eth\-GW is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.
+You should have received a copy of the GNU General Public License along
+with CAN\-Eth\-GW.
+If not, see <http://www.gnu.org/licenses/>.
+.SH SEE ALSO
+.PP
+\f[B]Homepage:\f[] <http://can-eth-gw.github.io>
+.SH AUTHORS
+Jakob Pfeiffer <jakob.pfeiffer@in.tum.de>.
