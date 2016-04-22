@@ -1,8 +1,5 @@
-INSTALL
-=======
-
-can-eth-utils
-============
+INSTALL cegwsend
+================
 
 Requirements:
 -------------
@@ -20,19 +17,16 @@ Installation
 
 	make
 	make install
-	cd src/cegwsend/
-	make
-	make install
+
 
 Usage
 -----
 
-look for
+look for [manual](https://github.com/can-eth-gw/cegwsend/blob/master/man/cegwsend.1.md)
 
-	man cegwctl
 	man cegwsend
 
-how to use the commands.
+how to use the command.
 
 References
 ==========
