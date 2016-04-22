@@ -4,23 +4,24 @@ Readme
 can-eth-utils
 =============
 
-Utilities to control and test the CAN - Ethernet Gateway kernel module.
+cegwsend - CAN - Ethernet Gateway Send Utility of the CAN - Ethernet Gateway kernel module.
+
+Send Utility for testing non ip-based ethernet interfaces. You can send with this utility an ethernet package with raw data or with an CAN/CAN-FD Frame as payload.
 
 Usage
 -----
 
-look for
+look for [manual](https://github.com/can-eth-gw/cegwsend/blob/master/man/cegwsend.1.md)
 
-	man cegwctl
 	man cegwsend
 
-how to use the commands.
+how to use the command.
 
 References
 ----------
 
 __Sources:__
-  [https://github.com/can-eth-gw/can-eth-gw-utils/](https://github.com/can-eth-gw/can-eth-gw-utils/ "Sources")
+  [https://github.com/can-eth-gw/cegwsend/](https://github.com/can-eth-gw/cegwsend/ "Sources")
 __Homepage:__
   [http://can-eth-gw.github.io/](http://can-eth-gw.github.io/ "Homepage")
 
