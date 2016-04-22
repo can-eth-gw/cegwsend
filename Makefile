@@ -59,4 +59,4 @@ install:
 	-cp "$(TARGET)" "/usr/local/bin/$(shell basename $(TARGET))"
 	-chmod +rx "/usr/local/bin/cegwsend"
 	-cp "./man/cegwsend.1" "/usr/share/man/man1/cegwsend.1"
-	-chmod +rx "/usr/share/man/man1/cegwsend.1"
+	-chmod +r "/usr/share/man/man1/cegwsend.1"
