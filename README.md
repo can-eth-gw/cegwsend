@@ -1,8 +1,5 @@
-Readme
-======
-
-can-eth-utils
-=============
+Readme cegwsend
+===============
 
 cegwsend - CAN - Ethernet Gateway Send Utility of the CAN - Ethernet Gateway kernel module.
 
